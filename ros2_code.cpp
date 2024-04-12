@@ -40,3 +40,10 @@ try{
   RCLCPP_ERROR(get_logger(), "cv_bridge exception: %s", e.what());
   return;
 }
+
+
+// QoS & rmw
+rmw_qos_profile_sensor_data
+rclcpp::QoS{1}.get_rmw_qos_profile()
+rclcpp::SensorDataQoS()
+rclcpp::QoS{1}
